@@ -213,7 +213,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="keepalived"><a href="#keepalived" class="headerlink" title="keepalived"></a>keepalived</h1><h2 id="abccd"><a href="#abccd" class="headerlink" title="abccd"></a>abccd</h2>
+        <h1 id="keepalived-haproxy-为k8s集群提供高可用能力"><a href="#keepalived-haproxy-为k8s集群提供高可用能力" class="headerlink" title="keepalived + haproxy 为k8s集群提供高可用能力"></a>keepalived + haproxy 为k8s集群提供高可用能力</h1><ul>
+<li>haproxy 作用： worker节点连接apiserver,用haproxy将后端所有apiserver做LB ,在kubespray项目中，也可用本地nginx实现</li>
+<li>keepalived  通过vrrp协议竞争VIP，虚IP</li>
+</ul>
+<h2 id="机器准备"><a href="#机器准备" class="headerlink" title="机器准备"></a>机器准备</h2><p>master+worker<br>10.0.112.181<br>10.0.112.182<br>10.0.112.183</p>
+<p>vip<br>10.0.112.184</p>
+<h2 id="keepalived安装"><a href="#keepalived安装" class="headerlink" title="keepalived安装"></a>keepalived安装</h2><p>yum install -y keepalived</p>
+
       
     </div>
     
